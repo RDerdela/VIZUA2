@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: vizua-quantum-oracle
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false # Render will prompt you to enter this value in the dashboard
